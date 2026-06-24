@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "prompt-sync": "^4.2.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.0.0",
+    "@types/prompt-sync": "^4.2.3",
+    "cross-env": "^10.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  },
+  "scripts": {
+    "test:qa": "cross-env ENV=qa playwright test",
+    "test:uat": "cross-env ENV=uat playwright test",
+    "test:prod": "cross-env ENV=prod playwright test"
+  }
+}
