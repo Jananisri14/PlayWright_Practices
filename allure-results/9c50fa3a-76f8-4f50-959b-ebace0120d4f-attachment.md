@@ -1,0 +1,969 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: testcase1.test.ts >> testcase1
+- Location: tests\testcase1.test.ts:2:1
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible() failed
+
+Locator: getByText('Account Created!')
+Expected: visible
+Timeout: 5000ms
+Error: element(s) not found
+
+Call log:
+  - Expect "toBeVisible" with timeout 5000ms
+  - waiting for getByText('Account Created!')
+
+```
+
+```yaml
+- heading "IntegrityError at /signup" [level=1]
+- text: "UNIQUE constraint failed: website_useraccount.email"
+- table:
+  - rowgroup:
+    - 'row "Request Method: POST"':
+      - rowheader "Request Method:"
+      - cell "POST"
+    - 'row "Request URL: https://automationexercise.com/signup"':
+      - rowheader "Request URL:"
+      - cell "https://automationexercise.com/signup"
+    - 'row "Django Version: 3.2.8"':
+      - rowheader "Django Version:"
+      - cell "3.2.8"
+    - 'row "Exception Type: IntegrityError"':
+      - rowheader "Exception Type:"
+      - cell "IntegrityError"
+    - 'row "Exception Value: UNIQUE constraint failed: website_useraccount.email"':
+      - rowheader "Exception Value:"
+      - 'cell "UNIQUE constraint failed: website_useraccount.email"'
+    - 'row "Exception Location: /home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py, line 423, in execute"':
+      - rowheader "Exception Location:"
+      - cell "/home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py, line 423, in execute"
+    - 'row "Python Executable: /home/duhds4uw5648/virtualenv/automation_exercise/3.7/bin/python3.7_bin"':
+      - rowheader "Python Executable:"
+      - cell "/home/duhds4uw5648/virtualenv/automation_exercise/3.7/bin/python3.7_bin"
+    - 'row "Python Version: 3.7.17"':
+      - rowheader "Python Version:"
+      - cell "3.7.17"
+    - 'row "Python Path: [''/home/duhds4uw5648/automation_exercise'', ''/opt/alt/ruby27/share/passenger/helper-scripts'', ''/home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib64/python37.zip'', ''/home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib64/python3.7'', ''/home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib64/python3.7/lib-dynload'', ''/opt/alt/python37/lib64/python3.7'', ''/opt/alt/python37/lib/python3.7'', ''/home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib/python3.7/site-packages'', ''/home/duhds4uw5648/automation_exercise'']"':
+      - rowheader "Python Path:"
+      - cell "['/home/duhds4uw5648/automation_exercise', '/opt/alt/ruby27/share/passenger/helper-scripts', '/home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib64/python37.zip', '/home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib64/python3.7', '/home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib64/python3.7/lib-dynload', '/opt/alt/python37/lib64/python3.7', '/opt/alt/python37/lib/python3.7', '/home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib/python3.7/site-packages', '/home/duhds4uw5648/automation_exercise']"
+    - 'row "Server time: Thu, 25 Jun 2026 16:15:22 +0530"':
+      - rowheader "Server time:"
+      - cell "Thu, 25 Jun 2026 16:15:22 +0530"
+- heading "Traceback Switch to copy-and-paste view" [level=2]:
+  - text: Traceback
+  - link "Switch to copy-and-paste view":
+    - /url: "#"
+- list:
+  - listitem:
+    - code: /home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib/python3.7/site-packages/django/db/backends/utils.py
+    - text: ", line 84, in _execute"
+    - list:
+      - listitem: return self.cursor.execute(sql, params) …
+    - link "▶ Local vars":
+      - /url: "#"
+  - listitem:
+    - code: /home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py
+    - text: ", line 423, in execute"
+    - list:
+      - listitem: return Database.Cursor.execute(self, query, params) …
+    - link "▶ Local vars":
+      - /url: "#"
+  - listitem:
+    - 'heading "The above exception (UNIQUE constraint failed: website_useraccount.email) was the direct cause of the following exception:" [level=3]'
+  - listitem:
+    - code: /home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib/python3.7/site-packages/django/core/handlers/exception.py
+    - text: ", line 47, in inner"
+    - list:
+      - listitem: response = get_response(request) …
+    - link "▶ Local vars":
+      - /url: "#"
+  - listitem:
+    - code: /home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib/python3.7/site-packages/django/core/handlers/base.py
+    - text: ", line 181, in _get_response"
+    - list:
+      - listitem: response = wrapped_callback(request, *callback_args, **callback_kwargs) …
+    - link "▶ Local vars":
+      - /url: "#"
+  - listitem:
+    - code: /home/duhds4uw5648/automation_exercise/website/views.py
+    - text: ", line 200, in signup"
+    - list:
+      - listitem: account.save() …
+    - link "▶ Local vars":
+      - /url: "#"
+  - listitem:
+    - code: /home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib/python3.7/site-packages/django/db/models/base.py
+    - text: ", line 727, in save"
+    - list:
+      - listitem: force_update=force_update, update_fields=update_fields) …
+    - link "▶ Local vars":
+      - /url: "#"
+  - listitem:
+    - code: /home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib/python3.7/site-packages/django/db/models/base.py
+    - text: ", line 765, in save_base"
+    - list:
+      - listitem: force_update, using, update_fields, …
+    - link "▶ Local vars":
+      - /url: "#"
+  - listitem:
+    - code: /home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib/python3.7/site-packages/django/db/models/base.py
+    - text: ", line 868, in _save_table"
+    - list:
+      - listitem: results = self._do_insert(cls._base_manager, using, fields, returning_fields, raw) …
+    - link "▶ Local vars":
+      - /url: "#"
+  - listitem:
+    - code: /home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib/python3.7/site-packages/django/db/models/base.py
+    - text: ", line 908, in _do_insert"
+    - list:
+      - listitem: using=using, raw=raw, …
+    - link "▶ Local vars":
+      - /url: "#"
+  - listitem:
+    - code: /home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib/python3.7/site-packages/django/db/models/manager.py
+    - text: ", line 85, in manager_method"
+    - list:
+      - listitem: return getattr(self.get_queryset(), name)(*args, **kwargs) …
+    - link "▶ Local vars":
+      - /url: "#"
+  - listitem:
+    - code: /home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib/python3.7/site-packages/django/db/models/query.py
+    - text: ", line 1270, in _insert"
+    - list:
+      - listitem: return query.get_compiler(using=using).execute_sql(returning_fields) …
+    - link "▶ Local vars":
+      - /url: "#"
+  - listitem:
+    - code: /home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib/python3.7/site-packages/django/db/models/sql/compiler.py
+    - text: ", line 1416, in execute_sql"
+    - list:
+      - listitem: cursor.execute(sql, params) …
+    - link "▶ Local vars":
+      - /url: "#"
+  - listitem:
+    - code: /home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib/python3.7/site-packages/django/db/backends/utils.py
+    - text: ", line 98, in execute"
+    - list:
+      - listitem: return super().execute(sql, params) …
+    - link "▶ Local vars":
+      - /url: "#"
+  - listitem:
+    - code: /home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib/python3.7/site-packages/django/db/backends/utils.py
+    - text: ", line 66, in execute"
+    - list:
+      - listitem: return self._execute_with_wrappers(sql, params, many=False, executor=self._execute) …
+    - link "▶ Local vars":
+      - /url: "#"
+  - listitem:
+    - code: /home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib/python3.7/site-packages/django/db/backends/utils.py
+    - text: ", line 75, in _execute_with_wrappers"
+    - list:
+      - listitem: return executor(sql, params, many, context) …
+    - link "▶ Local vars":
+      - /url: "#"
+  - listitem:
+    - code: /home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib/python3.7/site-packages/django/db/backends/utils.py
+    - text: ", line 84, in _execute"
+    - list:
+      - listitem: return self.cursor.execute(sql, params) …
+    - link "▶ Local vars":
+      - /url: "#"
+  - listitem:
+    - code: /home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib/python3.7/site-packages/django/db/utils.py
+    - text: ", line 90, in __exit__"
+    - list:
+      - listitem: raise dj_exc_value.with_traceback(traceback) from exc_value …
+    - link "▶ Local vars":
+      - /url: "#"
+  - listitem:
+    - code: /home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib/python3.7/site-packages/django/db/backends/utils.py
+    - text: ", line 84, in _execute"
+    - list:
+      - listitem: return self.cursor.execute(sql, params) …
+    - link "▶ Local vars":
+      - /url: "#"
+  - listitem:
+    - code: /home/duhds4uw5648/virtualenv/automation_exercise/3.7/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py
+    - text: ", line 423, in execute"
+    - list:
+      - listitem: return Database.Cursor.execute(self, query, params) …
+    - link "▶ Local vars":
+      - /url: "#"
+- heading "Request information" [level=2]
+- heading "USER" [level=3]
+- paragraph: AnonymousUser
+- heading "GET" [level=3]
+- paragraph: No GET data
+- heading "POST" [level=3]
+- table:
+  - rowgroup:
+    - row "Variable Value":
+      - columnheader "Variable"
+      - columnheader "Value"
+  - rowgroup:
+    - row "csrfmiddlewaretoken 'nhUa9PiPDq2mnZRkl2heStd1lGbOn537EbpwBJGxsJNpbYO6qHFRGoyEVvRX6tXM'":
+      - cell "csrfmiddlewaretoken"
+      - cell "'nhUa9PiPDq2mnZRkl2heStd1lGbOn537EbpwBJGxsJNpbYO6qHFRGoyEVvRX6tXM'"
+    - row "name 'Praveen'":
+      - cell "name"
+      - cell "'Praveen'"
+    - row "email_address 'praveen33@gmail.com'":
+      - cell "email_address"
+      - cell "'praveen33@gmail.com'"
+    - row "password 'praveen@123'":
+      - cell "password"
+      - cell "'praveen@123'"
+    - row "days ''":
+      - cell "days"
+      - cell "''"
+    - row "months ''":
+      - cell "months"
+      - cell "''"
+    - row "years ''":
+      - cell "years"
+      - cell "''"
+    - row "first_name 'Praveen'":
+      - cell "first_name"
+      - cell "'Praveen'"
+    - row "last_name 'Kumar'":
+      - cell "last_name"
+      - cell "'Kumar'"
+    - row "company ''":
+      - cell "company"
+      - cell "''"
+    - row "address1 'TTT Stret'":
+      - cell "address1"
+      - cell "'TTT Stret'"
+    - row "address2 ''":
+      - cell "address2"
+      - cell "''"
+    - row "country 'India'":
+      - cell "country"
+      - cell "'India'"
+    - row "state 'Tamil Nadu'":
+      - cell "state"
+      - cell "'Tamil Nadu'"
+    - row "city 'Madurai'":
+      - cell "city"
+      - cell "'Madurai'"
+    - row "zipcode '765845'":
+      - cell "zipcode"
+      - cell "'765845'"
+    - row "mobile_number '7658456789'":
+      - cell "mobile_number"
+      - cell "'7658456789'"
+    - row "form_type 'create_account'":
+      - cell "form_type"
+      - cell "'create_account'"
+- heading "FILES" [level=3]
+- paragraph: No FILES data
+- heading "COOKIES" [level=3]
+- table:
+  - rowgroup:
+    - row "Variable Value":
+      - columnheader "Variable"
+      - columnheader "Value"
+  - rowgroup:
+    - row "csrftoken 'Y3wPibp79HLECNDn70c2lj4RwCRDgGPrfX1bK5NPY0wHqMA9cFAF9epu6rxMZ4J6'":
+      - cell "csrftoken"
+      - cell "'Y3wPibp79HLECNDn70c2lj4RwCRDgGPrfX1bK5NPY0wHqMA9cFAF9epu6rxMZ4J6'"
+    - row "FCNEC '%5B%5B%22AKsRol9ll8yC8dqlYADY2iqlgHPsMDsEwrMtEKILAXwHgBBtkb2JzOdBKxnr0_dXCsUvBXQnCvFZVzRz7MNW2T94_DPfCgaocolUOpyMnf3HrUR-UM0vS_x4U_rHhUjxBt5PDzYTEJIi0FplKY8v0UiijH-9bUuDGg%3D%3D%22%5D%5D'":
+      - cell "FCNEC"
+      - cell "'%5B%5B%22AKsRol9ll8yC8dqlYADY2iqlgHPsMDsEwrMtEKILAXwHgBBtkb2JzOdBKxnr0_dXCsUvBXQnCvFZVzRz7MNW2T94_DPfCgaocolUOpyMnf3HrUR-UM0vS_x4U_rHhUjxBt5PDzYTEJIi0FplKY8v0UiijH-9bUuDGg%3D%3D%22%5D%5D'"
+    - row "FCCDCF '%5Bnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5B32%2C%22%5B%5C%22e87183aa-bdb0-40e3-97e6-6a815a01136e%5C%22%2C%5B1782384315%2C476000000%5D%5D%22%5D%5D%5D'":
+      - cell "FCCDCF"
+      - cell "'%5Bnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5B32%2C%22%5B%5C%22e87183aa-bdb0-40e3-97e6-6a815a01136e%5C%22%2C%5B1782384315%2C476000000%5D%5D%22%5D%5D%5D'"
+    - row "__gads 'ID=eea467fc98c32443:T=1782384318:RT=1782384318:S=ALNI_MbtpYDHXsN9rSK4OrfF8OSgRnnFvw'":
+      - cell "__gads"
+      - cell "'ID=eea467fc98c32443:T=1782384318:RT=1782384318:S=ALNI_MbtpYDHXsN9rSK4OrfF8OSgRnnFvw'"
+    - row "__gpi 'UID=000014863256b358:T=1782384318:RT=1782384318:S=ALNI_MYFIcvO-470XI30n6EupaHEprSwlg'":
+      - cell "__gpi"
+      - cell "'UID=000014863256b358:T=1782384318:RT=1782384318:S=ALNI_MYFIcvO-470XI30n6EupaHEprSwlg'"
+    - row "__eoi 'ID=b67baf7dafe72c25:T=1782384318:RT=1782384318:S=AA-Afjb0qX_QyUYO_pE9YNOTU0U-'":
+      - cell "__eoi"
+      - cell "'ID=b67baf7dafe72c25:T=1782384318:RT=1782384318:S=AA-Afjb0qX_QyUYO_pE9YNOTU0U-'"
+- heading "META" [level=3]
+- table:
+  - rowgroup:
+    - row "Variable Value":
+      - columnheader "Variable"
+      - columnheader "Value"
+  - rowgroup:
+    - row "CONTENT_LENGTH '359'":
+      - cell "CONTENT_LENGTH"
+      - cell "'359'"
+    - row "CONTENT_TYPE 'application/x-www-form-urlencoded'":
+      - cell "CONTENT_TYPE"
+      - cell "'application/x-www-form-urlencoded'"
+    - row "CSRF_COOKIE 'Y3wPibp79HLECNDn70c2lj4RwCRDgGPrfX1bK5NPY0wHqMA9cFAF9epu6rxMZ4J6'":
+      - cell "CSRF_COOKIE"
+      - cell "'Y3wPibp79HLECNDn70c2lj4RwCRDgGPrfX1bK5NPY0wHqMA9cFAF9epu6rxMZ4J6'"
+    - row "H2PUSH 'off'":
+      - cell "H2PUSH"
+      - cell "'off'"
+    - row "H2_PUSH 'off'":
+      - cell "H2_PUSH"
+      - cell "'off'"
+    - row "H2_PUSHED ''":
+      - cell "H2_PUSHED"
+      - cell "''"
+    - row "H2_PUSHED_ON ''":
+      - cell "H2_PUSHED_ON"
+      - cell "''"
+    - row "H2_STREAM_ID '91'":
+      - cell "H2_STREAM_ID"
+      - cell "'91'"
+    - row "H2_STREAM_TAG '3150749-1591-91'":
+      - cell "H2_STREAM_TAG"
+      - cell "'3150749-1591-91'"
+    - row "HTTP2 'on'":
+      - cell "HTTP2"
+      - cell "'on'"
+    - row "HTTPS 'on'":
+      - cell "HTTPS"
+      - cell "'on'"
+    - row "HTTP_ACCEPT 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'":
+      - cell "HTTP_ACCEPT"
+      - cell "'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'"
+    - row "HTTP_ACCEPT_ENCODING 'gzip, br'":
+      - cell "HTTP_ACCEPT_ENCODING"
+      - cell "'gzip, br'"
+    - row "HTTP_ACCEPT_LANGUAGE 'en-US'":
+      - cell "HTTP_ACCEPT_LANGUAGE"
+      - cell "'en-US'"
+    - row "HTTP_CDN_LOOP 'cloudflare; loops=1'":
+      - cell "HTTP_CDN_LOOP"
+      - cell "'cloudflare; loops=1'"
+    - row "HTTP_CF_CONNECTING_IP '49.206.117.252'":
+      - cell "HTTP_CF_CONNECTING_IP"
+      - cell "'49.206.117.252'"
+    - row "HTTP_CF_IPCOUNTRY 'IN'":
+      - cell "HTTP_CF_IPCOUNTRY"
+      - cell "'IN'"
+    - row "HTTP_CF_RAY 'a11361da0b5dc736-MAA'":
+      - cell "HTTP_CF_RAY"
+      - cell "'a11361da0b5dc736-MAA'"
+    - 'row "HTTP_CF_VISITOR ''{\"scheme\":\"https\"}''"':
+      - cell "HTTP_CF_VISITOR"
+      - 'cell "''{\"scheme\":\"https\"}''"'
+    - row "HTTP_COOKIE ('csrftoken=Y3wPibp79HLECNDn70c2lj4RwCRDgGPrfX1bK5NPY0wHqMA9cFAF9epu6rxMZ4J6; ' 'FCNEC=%5B%5B%22AKsRol9ll8yC8dqlYADY2iqlgHPsMDsEwrMtEKILAXwHgBBtkb2JzOdBKxnr0_dXCsUvBXQnCvFZVzRz7MNW2T94_DPfCgaocolUOpyMnf3HrUR-UM0vS_x4U_rHhUjxBt5PDzYTEJIi0FplKY8v0UiijH-9bUuDGg%3D%3D%22%5D%5D; ' 'FCCDCF=%5Bnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5B32%2C%22%5B%5C%22e87183aa-bdb0-40e3-97e6-6a815a01136e%5C%22%2C%5B1782384315%2C476000000%5D%5D%22%5D%5D%5D; ' '__gads=ID=eea467fc98c32443:T=1782384318:RT=1782384318:S=ALNI_MbtpYDHXsN9rSK4OrfF8OSgRnnFvw; ' '__gpi=UID=000014863256b358:T=1782384318:RT=1782384318:S=ALNI_MYFIcvO-470XI30n6EupaHEprSwlg; ' '__eoi=ID=b67baf7dafe72c25:T=1782384318:RT=1782384318:S=AA-Afjb0qX_QyUYO_pE9YNOTU0U-')":
+      - cell "HTTP_COOKIE"
+      - cell "('csrftoken=Y3wPibp79HLECNDn70c2lj4RwCRDgGPrfX1bK5NPY0wHqMA9cFAF9epu6rxMZ4J6; ' 'FCNEC=%5B%5B%22AKsRol9ll8yC8dqlYADY2iqlgHPsMDsEwrMtEKILAXwHgBBtkb2JzOdBKxnr0_dXCsUvBXQnCvFZVzRz7MNW2T94_DPfCgaocolUOpyMnf3HrUR-UM0vS_x4U_rHhUjxBt5PDzYTEJIi0FplKY8v0UiijH-9bUuDGg%3D%3D%22%5D%5D; ' 'FCCDCF=%5Bnull%2Cnull%2Cnull%2Cnull%2Cnull%2Cnull%2C%5B%5B32%2C%22%5B%5C%22e87183aa-bdb0-40e3-97e6-6a815a01136e%5C%22%2C%5B1782384315%2C476000000%5D%5D%22%5D%5D%5D; ' '__gads=ID=eea467fc98c32443:T=1782384318:RT=1782384318:S=ALNI_MbtpYDHXsN9rSK4OrfF8OSgRnnFvw; ' '__gpi=UID=000014863256b358:T=1782384318:RT=1782384318:S=ALNI_MYFIcvO-470XI30n6EupaHEprSwlg; ' '__eoi=ID=b67baf7dafe72c25:T=1782384318:RT=1782384318:S=AA-Afjb0qX_QyUYO_pE9YNOTU0U-')"
+    - row "HTTP_HOST 'automationexercise.com'":
+      - cell "HTTP_HOST"
+      - cell "'automationexercise.com'"
+    - row "HTTP_ORIGIN 'https://automationexercise.com'":
+      - cell "HTTP_ORIGIN"
+      - cell "'https://automationexercise.com'"
+    - row "HTTP_PRIORITY 'u=0, i'":
+      - cell "HTTP_PRIORITY"
+      - cell "'u=0, i'"
+    - row "HTTP_REFERER 'https://automationexercise.com/signup'":
+      - cell "HTTP_REFERER"
+      - cell "'https://automationexercise.com/signup'"
+    - row "HTTP_SEC_FETCH_DEST 'document'":
+      - cell "HTTP_SEC_FETCH_DEST"
+      - cell "'document'"
+    - row "HTTP_SEC_FETCH_MODE 'navigate'":
+      - cell "HTTP_SEC_FETCH_MODE"
+      - cell "'navigate'"
+    - row "HTTP_SEC_FETCH_SITE 'same-origin'":
+      - cell "HTTP_SEC_FETCH_SITE"
+      - cell "'same-origin'"
+    - row "HTTP_SEC_FETCH_USER '?1'":
+      - cell "HTTP_SEC_FETCH_USER"
+      - cell "'?1'"
+    - row "HTTP_UPGRADE_INSECURE_REQUESTS '1'":
+      - cell "HTTP_UPGRADE_INSECURE_REQUESTS"
+      - cell "'1'"
+    - row "HTTP_USER_AGENT ('Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:151.0) Gecko/20100101 ' 'Firefox/151.0')":
+      - cell "HTTP_USER_AGENT"
+      - cell "('Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:151.0) Gecko/20100101 ' 'Firefox/151.0')"
+    - row "HTTP_X_FORWARDED_PROTO 'https'":
+      - cell "HTTP_X_FORWARDED_PROTO"
+      - cell "'https'"
+    - row "HTTP_X_HTTPS '1'":
+      - cell "HTTP_X_HTTPS"
+      - cell "'1'"
+    - row "PASSENGER_CONNECT_PASSWORD '********************'":
+      - cell "PASSENGER_CONNECT_PASSWORD"
+      - cell "'********************'"
+    - row "PATH_INFO '/signup'":
+      - cell "PATH_INFO"
+      - cell "'/signup'"
+    - row "QUERY_STRING ''":
+      - cell "QUERY_STRING"
+      - cell "''"
+    - row "REMOTE_ADDR '49.206.117.252'":
+      - cell "REMOTE_ADDR"
+      - cell "'49.206.117.252'"
+    - row "REMOTE_PORT '9872'":
+      - cell "REMOTE_PORT"
+      - cell "'9872'"
+    - row "REQUEST_METHOD 'POST'":
+      - cell "REQUEST_METHOD"
+      - cell "'POST'"
+    - row "REQUEST_URI '/signup'":
+      - cell "REQUEST_URI"
+      - cell "'/signup'"
+    - row "SCRIPT_NAME ''":
+      - cell "SCRIPT_NAME"
+      - cell "''"
+    - row "SCRIPT_URI 'https://automationexercise.com/signup'":
+      - cell "SCRIPT_URI"
+      - cell "'https://automationexercise.com/signup'"
+    - row "SCRIPT_URL '/signup'":
+      - cell "SCRIPT_URL"
+      - cell "'/signup'"
+    - row "SERVER_NAME 'automationexercise.com'":
+      - cell "SERVER_NAME"
+      - cell "'automationexercise.com'"
+    - row "SERVER_PORT '443'":
+      - cell "SERVER_PORT"
+      - cell "'443'"
+    - row "SERVER_PROTOCOL 'HTTP/1.1'":
+      - cell "SERVER_PROTOCOL"
+      - cell "'HTTP/1.1'"
+    - row "SERVER_SOFTWARE ('Apache/2.4.68 (cPanel) OpenSSL/1.1.1k mod_bwlimited/1.4 ' 'Phusion_Passenger/6.1.2')":
+      - cell "SERVER_SOFTWARE"
+      - cell "('Apache/2.4.68 (cPanel) OpenSSL/1.1.1k mod_bwlimited/1.4 ' 'Phusion_Passenger/6.1.2')"
+    - row "SSL_TLS_SNI 'automationexercise.com'":
+      - cell "SSL_TLS_SNI"
+      - cell "'automationexercise.com'"
+    - row "UNIQUE_ID 'aj0GwbbxDHzdjStPhAv3xAABWzU'":
+      - cell "UNIQUE_ID"
+      - cell "'aj0GwbbxDHzdjStPhAv3xAABWzU'"
+    - row "USER_ID '8307509'":
+      - cell "USER_ID"
+      - cell "'8307509'"
+    - row "passenger.hijack '********************'":
+      - cell "passenger.hijack"
+      - cell "'********************'"
+    - row "wsgi.errors <_io.TextIOWrapper name='<stderr>' mode='w' encoding='UTF-8'>":
+      - cell "wsgi.errors"
+      - cell "<_io.TextIOWrapper name='<stderr>' mode='w' encoding='UTF-8'>"
+    - row "wsgi.input <_io.BufferedReader name=9>":
+      - cell "wsgi.input"
+      - cell "<_io.BufferedReader name=9>"
+    - row "wsgi.multiprocess True":
+      - cell "wsgi.multiprocess"
+      - cell "True"
+    - row "wsgi.multithread False":
+      - cell "wsgi.multithread"
+      - cell "False"
+    - row "wsgi.run_once False":
+      - cell "wsgi.run_once"
+      - cell "False"
+    - row "wsgi.url_scheme 'https'":
+      - cell "wsgi.url_scheme"
+      - cell "'https'"
+    - row "wsgi.version (1, 0)":
+      - cell "wsgi.version"
+      - cell "(1, 0)"
+- heading "Settings" [level=3]
+- heading "Using settings module automation_exercise.settings" [level=4]:
+  - text: Using settings module
+  - code: automation_exercise.settings
+- table:
+  - rowgroup:
+    - row "Setting Value":
+      - columnheader "Setting"
+      - columnheader "Value"
+  - rowgroup:
+    - 'row "ABSOLUTE_URL_OVERRIDES {}"':
+      - cell "ABSOLUTE_URL_OVERRIDES"
+      - 'cell "{}"'
+    - row "ADMINS []":
+      - cell "ADMINS"
+      - cell "[]"
+    - row "ALLOWED_HOSTS ['*']":
+      - cell "ALLOWED_HOSTS"
+      - cell "['*']"
+    - row "APPEND_SLASH True":
+      - cell "APPEND_SLASH"
+      - cell "True"
+    - row "AUTHENTICATION_BACKENDS ['django.contrib.auth.backends.ModelBackend']":
+      - cell "AUTHENTICATION_BACKENDS"
+      - cell "['django.contrib.auth.backends.ModelBackend']"
+    - row "AUTH_PASSWORD_VALIDATORS '********************'":
+      - cell "AUTH_PASSWORD_VALIDATORS"
+      - cell "'********************'"
+    - row "AUTH_USER_MODEL 'auth.User'":
+      - cell "AUTH_USER_MODEL"
+      - cell "'auth.User'"
+    - row "BASE_DIR PosixPath('/home/duhds4uw5648/automation_exercise')":
+      - cell "BASE_DIR"
+      - cell "PosixPath('/home/duhds4uw5648/automation_exercise')"
+    - 'row "CACHES {''default'': {''BACKEND'': ''django.core.cache.backends.locmem.LocMemCache''}}"':
+      - cell "CACHES"
+      - 'cell "{''default'': {''BACKEND'': ''django.core.cache.backends.locmem.LocMemCache''}}"'
+    - row "CACHE_MIDDLEWARE_ALIAS 'default'":
+      - cell "CACHE_MIDDLEWARE_ALIAS"
+      - cell "'default'"
+    - row "CACHE_MIDDLEWARE_KEY_PREFIX '********************'":
+      - cell "CACHE_MIDDLEWARE_KEY_PREFIX"
+      - cell "'********************'"
+    - row "CACHE_MIDDLEWARE_SECONDS 600":
+      - cell "CACHE_MIDDLEWARE_SECONDS"
+      - cell "600"
+    - row "CSRF_COOKIE_AGE 31449600":
+      - cell "CSRF_COOKIE_AGE"
+      - cell "31449600"
+    - row "CSRF_COOKIE_DOMAIN None":
+      - cell "CSRF_COOKIE_DOMAIN"
+      - cell "None"
+    - row "CSRF_COOKIE_HTTPONLY False":
+      - cell "CSRF_COOKIE_HTTPONLY"
+      - cell "False"
+    - row "CSRF_COOKIE_NAME 'csrftoken'":
+      - cell "CSRF_COOKIE_NAME"
+      - cell "'csrftoken'"
+    - row "CSRF_COOKIE_PATH '/'":
+      - cell "CSRF_COOKIE_PATH"
+      - cell "'/'"
+    - row "CSRF_COOKIE_SAMESITE 'Lax'":
+      - cell "CSRF_COOKIE_SAMESITE"
+      - cell "'Lax'"
+    - row "CSRF_COOKIE_SECURE False":
+      - cell "CSRF_COOKIE_SECURE"
+      - cell "False"
+    - row "CSRF_FAILURE_VIEW 'django.views.csrf.csrf_failure'":
+      - cell "CSRF_FAILURE_VIEW"
+      - cell "'django.views.csrf.csrf_failure'"
+    - row "CSRF_HEADER_NAME 'HTTP_X_CSRFTOKEN'":
+      - cell "CSRF_HEADER_NAME"
+      - cell "'HTTP_X_CSRFTOKEN'"
+    - row "CSRF_TRUSTED_ORIGINS []":
+      - cell "CSRF_TRUSTED_ORIGINS"
+      - cell "[]"
+    - row "CSRF_USE_SESSIONS False":
+      - cell "CSRF_USE_SESSIONS"
+      - cell "False"
+    - 'row "DATABASES {''default'': {''ATOMIC_REQUESTS'': False, ''AUTOCOMMIT'': True, ''CONN_MAX_AGE'': 0, ''ENGINE'': ''django.db.backends.sqlite3'', ''HOST'': '''', ''NAME'': PosixPath(''/home/duhds4uw5648/automation_exercise/db.sqlite3''), ''OPTIONS'': {}, ''PASSWORD'': ''********************'', ''PORT'': '''', ''TEST'': {''CHARSET'': None, ''COLLATION'': None, ''MIGRATE'': True, ''MIRROR'': None, ''NAME'': None}, ''TIME_ZONE'': None, ''USER'': ''''}}"':
+      - cell "DATABASES"
+      - 'cell "{''default'': {''ATOMIC_REQUESTS'': False, ''AUTOCOMMIT'': True, ''CONN_MAX_AGE'': 0, ''ENGINE'': ''django.db.backends.sqlite3'', ''HOST'': '''', ''NAME'': PosixPath(''/home/duhds4uw5648/automation_exercise/db.sqlite3''), ''OPTIONS'': {}, ''PASSWORD'': ''********************'', ''PORT'': '''', ''TEST'': {''CHARSET'': None, ''COLLATION'': None, ''MIGRATE'': True, ''MIRROR'': None, ''NAME'': None}, ''TIME_ZONE'': None, ''USER'': ''''}}"'
+    - row "DATABASE_ROUTERS []":
+      - cell "DATABASE_ROUTERS"
+      - cell "[]"
+    - row "DATA_UPLOAD_MAX_MEMORY_SIZE 2621440":
+      - cell "DATA_UPLOAD_MAX_MEMORY_SIZE"
+      - cell "2621440"
+    - row "DATA_UPLOAD_MAX_NUMBER_FIELDS 1000":
+      - cell "DATA_UPLOAD_MAX_NUMBER_FIELDS"
+      - cell "1000"
+    - row "DATETIME_FORMAT 'N j, Y, P'":
+      - cell "DATETIME_FORMAT"
+      - cell "'N j, Y, P'"
+    - row "DATETIME_INPUT_FORMATS ['%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M:%S.%f', '%Y-%m-%d %H:%M', '%m/%d/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S.%f', '%m/%d/%Y %H:%M', '%m/%d/%y %H:%M:%S', '%m/%d/%y %H:%M:%S.%f', '%m/%d/%y %H:%M']":
+      - cell "DATETIME_INPUT_FORMATS"
+      - cell "['%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M:%S.%f', '%Y-%m-%d %H:%M', '%m/%d/%Y %H:%M:%S', '%m/%d/%Y %H:%M:%S.%f', '%m/%d/%Y %H:%M', '%m/%d/%y %H:%M:%S', '%m/%d/%y %H:%M:%S.%f', '%m/%d/%y %H:%M']"
+    - row "DATE_FORMAT 'N j, Y'":
+      - cell "DATE_FORMAT"
+      - cell "'N j, Y'"
+    - row "DATE_INPUT_FORMATS ['%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y', '%b %d %Y', '%b %d, %Y', '%d %b %Y', '%d %b, %Y', '%B %d %Y', '%B %d, %Y', '%d %B %Y', '%d %B, %Y']":
+      - cell "DATE_INPUT_FORMATS"
+      - cell "['%Y-%m-%d', '%m/%d/%Y', '%m/%d/%y', '%b %d %Y', '%b %d, %Y', '%d %b %Y', '%d %b, %Y', '%B %d %Y', '%B %d, %Y', '%d %B %Y', '%d %B, %Y']"
+    - row "DEBUG True":
+      - cell "DEBUG"
+      - cell "True"
+    - row "DEBUG_PROPAGATE_EXCEPTIONS False":
+      - cell "DEBUG_PROPAGATE_EXCEPTIONS"
+      - cell "False"
+    - row "DECIMAL_SEPARATOR '.'":
+      - cell "DECIMAL_SEPARATOR"
+      - cell "'.'"
+    - row "DEFAULT_AUTO_FIELD 'django.db.models.BigAutoField'":
+      - cell "DEFAULT_AUTO_FIELD"
+      - cell "'django.db.models.BigAutoField'"
+    - row "DEFAULT_CHARSET 'utf-8'":
+      - cell "DEFAULT_CHARSET"
+      - cell "'utf-8'"
+    - row "DEFAULT_EXCEPTION_REPORTER 'django.views.debug.ExceptionReporter'":
+      - cell "DEFAULT_EXCEPTION_REPORTER"
+      - cell "'django.views.debug.ExceptionReporter'"
+    - row "DEFAULT_EXCEPTION_REPORTER_FILTER 'django.views.debug.SafeExceptionReporterFilter'":
+      - cell "DEFAULT_EXCEPTION_REPORTER_FILTER"
+      - cell "'django.views.debug.SafeExceptionReporterFilter'"
+    - row "DEFAULT_FILE_STORAGE 'django.core.files.storage.FileSystemStorage'":
+      - cell "DEFAULT_FILE_STORAGE"
+      - cell "'django.core.files.storage.FileSystemStorage'"
+    - row "DEFAULT_FROM_EMAIL 'webmaster@localhost'":
+      - cell "DEFAULT_FROM_EMAIL"
+      - cell "'webmaster@localhost'"
+    - row "DEFAULT_HASHING_ALGORITHM 'sha256'":
+      - cell "DEFAULT_HASHING_ALGORITHM"
+      - cell "'sha256'"
+    - row "DEFAULT_INDEX_TABLESPACE ''":
+      - cell "DEFAULT_INDEX_TABLESPACE"
+      - cell "''"
+    - row "DEFAULT_TABLESPACE ''":
+      - cell "DEFAULT_TABLESPACE"
+      - cell "''"
+    - row "DISALLOWED_USER_AGENTS []":
+      - cell "DISALLOWED_USER_AGENTS"
+      - cell "[]"
+    - row "EMAIL_BACKEND 'django.core.mail.backends.smtp.EmailBackend'":
+      - cell "EMAIL_BACKEND"
+      - cell "'django.core.mail.backends.smtp.EmailBackend'"
+    - row "EMAIL_HOST 'localhost'":
+      - cell "EMAIL_HOST"
+      - cell "'localhost'"
+    - row "EMAIL_HOST_PASSWORD '********************'":
+      - cell "EMAIL_HOST_PASSWORD"
+      - cell "'********************'"
+    - row "EMAIL_HOST_USER ''":
+      - cell "EMAIL_HOST_USER"
+      - cell "''"
+    - row "EMAIL_PORT 25":
+      - cell "EMAIL_PORT"
+      - cell "25"
+    - row "EMAIL_SSL_CERTFILE None":
+      - cell "EMAIL_SSL_CERTFILE"
+      - cell "None"
+    - row "EMAIL_SSL_KEYFILE '********************'":
+      - cell "EMAIL_SSL_KEYFILE"
+      - cell "'********************'"
+    - row "EMAIL_SUBJECT_PREFIX '[Django] '":
+      - cell "EMAIL_SUBJECT_PREFIX"
+      - cell "'[Django] '"
+    - row "EMAIL_TIMEOUT None":
+      - cell "EMAIL_TIMEOUT"
+      - cell "None"
+    - row "EMAIL_USE_LOCALTIME False":
+      - cell "EMAIL_USE_LOCALTIME"
+      - cell "False"
+    - row "EMAIL_USE_SSL False":
+      - cell "EMAIL_USE_SSL"
+      - cell "False"
+    - row "EMAIL_USE_TLS False":
+      - cell "EMAIL_USE_TLS"
+      - cell "False"
+    - row "FILE_UPLOAD_DIRECTORY_PERMISSIONS None":
+      - cell "FILE_UPLOAD_DIRECTORY_PERMISSIONS"
+      - cell "None"
+    - row "FILE_UPLOAD_HANDLERS ['django.core.files.uploadhandler.MemoryFileUploadHandler', 'django.core.files.uploadhandler.TemporaryFileUploadHandler']":
+      - cell "FILE_UPLOAD_HANDLERS"
+      - cell "['django.core.files.uploadhandler.MemoryFileUploadHandler', 'django.core.files.uploadhandler.TemporaryFileUploadHandler']"
+    - row "FILE_UPLOAD_MAX_MEMORY_SIZE 2621440":
+      - cell "FILE_UPLOAD_MAX_MEMORY_SIZE"
+      - cell "2621440"
+    - row "FILE_UPLOAD_PERMISSIONS 420":
+      - cell "FILE_UPLOAD_PERMISSIONS"
+      - cell "420"
+    - row "FILE_UPLOAD_TEMP_DIR None":
+      - cell "FILE_UPLOAD_TEMP_DIR"
+      - cell "None"
+    - row "FIRST_DAY_OF_WEEK 0":
+      - cell "FIRST_DAY_OF_WEEK"
+      - cell "0"
+    - row "FIXTURE_DIRS []":
+      - cell "FIXTURE_DIRS"
+      - cell "[]"
+    - row "FORCE_SCRIPT_NAME None":
+      - cell "FORCE_SCRIPT_NAME"
+      - cell "None"
+    - row "FORMAT_MODULE_PATH None":
+      - cell "FORMAT_MODULE_PATH"
+      - cell "None"
+    - row "FORM_RENDERER 'django.forms.renderers.DjangoTemplates'":
+      - cell "FORM_RENDERER"
+      - cell "'django.forms.renderers.DjangoTemplates'"
+    - row "IGNORABLE_404_URLS []":
+      - cell "IGNORABLE_404_URLS"
+      - cell "[]"
+    - row "INSTALLED_APPS ['django.contrib.admin', 'django.contrib.auth', 'django.contrib.contenttypes', 'django.contrib.sessions', 'django.contrib.messages', 'django.contrib.staticfiles', 'website', 'apis', 'rest_framework']":
+      - cell "INSTALLED_APPS"
+      - cell "['django.contrib.admin', 'django.contrib.auth', 'django.contrib.contenttypes', 'django.contrib.sessions', 'django.contrib.messages', 'django.contrib.staticfiles', 'website', 'apis', 'rest_framework']"
+    - row "INTERNAL_IPS []":
+      - cell "INTERNAL_IPS"
+      - cell "[]"
+    - row:
+      - cell "LANGUAGES"
+      - cell
+    - row "LANGUAGES_BIDI ['he', 'ar', 'ar-dz', 'fa', 'ur']":
+      - cell "LANGUAGES_BIDI"
+      - cell "['he', 'ar', 'ar-dz', 'fa', 'ur']"
+    - row "LANGUAGE_CODE 'en-us'":
+      - cell "LANGUAGE_CODE"
+      - cell "'en-us'"
+    - row "LANGUAGE_COOKIE_AGE None":
+      - cell "LANGUAGE_COOKIE_AGE"
+      - cell "None"
+    - row "LANGUAGE_COOKIE_DOMAIN None":
+      - cell "LANGUAGE_COOKIE_DOMAIN"
+      - cell "None"
+    - row "LANGUAGE_COOKIE_HTTPONLY False":
+      - cell "LANGUAGE_COOKIE_HTTPONLY"
+      - cell "False"
+    - row "LANGUAGE_COOKIE_NAME 'django_language'":
+      - cell "LANGUAGE_COOKIE_NAME"
+      - cell "'django_language'"
+    - row "LANGUAGE_COOKIE_PATH '/'":
+      - cell "LANGUAGE_COOKIE_PATH"
+      - cell "'/'"
+    - row "LANGUAGE_COOKIE_SAMESITE None":
+      - cell "LANGUAGE_COOKIE_SAMESITE"
+      - cell "None"
+    - row "LANGUAGE_COOKIE_SECURE False":
+      - cell "LANGUAGE_COOKIE_SECURE"
+      - cell "False"
+    - row "LOCALE_PATHS []":
+      - cell "LOCALE_PATHS"
+      - cell "[]"
+    - 'row "LOGGING {}"':
+      - cell "LOGGING"
+      - 'cell "{}"'
+    - row "LOGGING_CONFIG 'logging.config.dictConfig'":
+      - cell "LOGGING_CONFIG"
+      - cell "'logging.config.dictConfig'"
+    - row "LOGIN_REDIRECT_URL '/accounts/profile/'":
+      - cell "LOGIN_REDIRECT_URL"
+      - cell "'/accounts/profile/'"
+    - row "LOGIN_URL '/accounts/login/'":
+      - cell "LOGIN_URL"
+      - cell "'/accounts/login/'"
+    - row "LOGOUT_REDIRECT_URL None":
+      - cell "LOGOUT_REDIRECT_URL"
+      - cell "None"
+    - row "MANAGERS []":
+      - cell "MANAGERS"
+      - cell "[]"
+    - row "MEDIA_ROOT ''":
+      - cell "MEDIA_ROOT"
+      - cell "''"
+    - row "MEDIA_URL '/'":
+      - cell "MEDIA_URL"
+      - cell "'/'"
+    - row "MESSAGE_STORAGE 'django.contrib.messages.storage.fallback.FallbackStorage'":
+      - cell "MESSAGE_STORAGE"
+      - cell "'django.contrib.messages.storage.fallback.FallbackStorage'"
+    - row "MIDDLEWARE ['django.middleware.security.SecurityMiddleware', 'django.contrib.sessions.middleware.SessionMiddleware', 'django.middleware.common.CommonMiddleware', 'django.middleware.csrf.CsrfViewMiddleware', 'django.contrib.auth.middleware.AuthenticationMiddleware', 'django.contrib.messages.middleware.MessageMiddleware', 'django.middleware.clickjacking.XFrameOptionsMiddleware']":
+      - cell "MIDDLEWARE"
+      - cell "['django.middleware.security.SecurityMiddleware', 'django.contrib.sessions.middleware.SessionMiddleware', 'django.middleware.common.CommonMiddleware', 'django.middleware.csrf.CsrfViewMiddleware', 'django.contrib.auth.middleware.AuthenticationMiddleware', 'django.contrib.messages.middleware.MessageMiddleware', 'django.middleware.clickjacking.XFrameOptionsMiddleware']"
+    - 'row "MIGRATION_MODULES {}"':
+      - cell "MIGRATION_MODULES"
+      - 'cell "{}"'
+    - row "MONTH_DAY_FORMAT 'F j'":
+      - cell "MONTH_DAY_FORMAT"
+      - cell "'F j'"
+    - row "NUMBER_GROUPING 0":
+      - cell "NUMBER_GROUPING"
+      - cell "0"
+    - row "PASSWORD_HASHERS '********************'":
+      - cell "PASSWORD_HASHERS"
+      - cell "'********************'"
+    - row "PASSWORD_RESET_TIMEOUT '********************'":
+      - cell "PASSWORD_RESET_TIMEOUT"
+      - cell "'********************'"
+    - row "PASSWORD_RESET_TIMEOUT_DAYS '********************'":
+      - cell "PASSWORD_RESET_TIMEOUT_DAYS"
+      - cell "'********************'"
+    - row "PREPEND_WWW False":
+      - cell "PREPEND_WWW"
+      - cell "False"
+    - row "ROOT_URLCONF 'automation_exercise.urls'":
+      - cell "ROOT_URLCONF"
+      - cell "'automation_exercise.urls'"
+    - row "SECRET_KEY '********************'":
+      - cell "SECRET_KEY"
+      - cell "'********************'"
+    - row "SECURE_BROWSER_XSS_FILTER False":
+      - cell "SECURE_BROWSER_XSS_FILTER"
+      - cell "False"
+    - row "SECURE_CONTENT_TYPE_NOSNIFF True":
+      - cell "SECURE_CONTENT_TYPE_NOSNIFF"
+      - cell "True"
+    - row "SECURE_HSTS_INCLUDE_SUBDOMAINS False":
+      - cell "SECURE_HSTS_INCLUDE_SUBDOMAINS"
+      - cell "False"
+    - row "SECURE_HSTS_PRELOAD False":
+      - cell "SECURE_HSTS_PRELOAD"
+      - cell "False"
+    - row "SECURE_HSTS_SECONDS 0":
+      - cell "SECURE_HSTS_SECONDS"
+      - cell "0"
+    - row "SECURE_PROXY_SSL_HEADER None":
+      - cell "SECURE_PROXY_SSL_HEADER"
+      - cell "None"
+    - row "SECURE_REDIRECT_EXEMPT []":
+      - cell "SECURE_REDIRECT_EXEMPT"
+      - cell "[]"
+    - row "SECURE_REFERRER_POLICY 'same-origin'":
+      - cell "SECURE_REFERRER_POLICY"
+      - cell "'same-origin'"
+    - row "SECURE_SSL_HOST None":
+      - cell "SECURE_SSL_HOST"
+      - cell "None"
+    - row "SECURE_SSL_REDIRECT False":
+      - cell "SECURE_SSL_REDIRECT"
+      - cell "False"
+    - row "SERVER_EMAIL 'root@localhost'":
+      - cell "SERVER_EMAIL"
+      - cell "'root@localhost'"
+    - row "SESSION_CACHE_ALIAS 'default'":
+      - cell "SESSION_CACHE_ALIAS"
+      - cell "'default'"
+    - row "SESSION_COOKIE_AGE 1209600":
+      - cell "SESSION_COOKIE_AGE"
+      - cell "1209600"
+    - row "SESSION_COOKIE_DOMAIN None":
+      - cell "SESSION_COOKIE_DOMAIN"
+      - cell "None"
+    - row "SESSION_COOKIE_HTTPONLY True":
+      - cell "SESSION_COOKIE_HTTPONLY"
+      - cell "True"
+    - row "SESSION_COOKIE_NAME 'sessionid'":
+      - cell "SESSION_COOKIE_NAME"
+      - cell "'sessionid'"
+    - row "SESSION_COOKIE_PATH '/'":
+      - cell "SESSION_COOKIE_PATH"
+      - cell "'/'"
+    - row "SESSION_COOKIE_SAMESITE 'Lax'":
+      - cell "SESSION_COOKIE_SAMESITE"
+      - cell "'Lax'"
+    - row "SESSION_COOKIE_SECURE False":
+      - cell "SESSION_COOKIE_SECURE"
+      - cell "False"
+    - row "SESSION_ENGINE 'django.contrib.sessions.backends.db'":
+      - cell "SESSION_ENGINE"
+      - cell "'django.contrib.sessions.backends.db'"
+    - row "SESSION_EXPIRE_AT_BROWSER_CLOSE False":
+      - cell "SESSION_EXPIRE_AT_BROWSER_CLOSE"
+      - cell "False"
+    - row "SESSION_FILE_PATH None":
+      - cell "SESSION_FILE_PATH"
+      - cell "None"
+    - row "SESSION_SAVE_EVERY_REQUEST False":
+      - cell "SESSION_SAVE_EVERY_REQUEST"
+      - cell "False"
+    - row "SESSION_SERIALIZER 'django.contrib.sessions.serializers.JSONSerializer'":
+      - cell "SESSION_SERIALIZER"
+      - cell "'django.contrib.sessions.serializers.JSONSerializer'"
+    - row "SETTINGS_MODULE 'automation_exercise.settings'":
+      - cell "SETTINGS_MODULE"
+      - cell "'automation_exercise.settings'"
+    - row "SHORT_DATETIME_FORMAT 'm/d/Y P'":
+      - cell "SHORT_DATETIME_FORMAT"
+      - cell "'m/d/Y P'"
+    - row "SHORT_DATE_FORMAT 'm/d/Y'":
+      - cell "SHORT_DATE_FORMAT"
+      - cell "'m/d/Y'"
+    - row "SIGNING_BACKEND 'django.core.signing.TimestampSigner'":
+      - cell "SIGNING_BACKEND"
+      - cell "'django.core.signing.TimestampSigner'"
+    - row "SILENCED_SYSTEM_CHECKS []":
+      - cell "SILENCED_SYSTEM_CHECKS"
+      - cell "[]"
+    - row "STATICFILES_DIRS []":
+      - cell "STATICFILES_DIRS"
+      - cell "[]"
+    - row "STATICFILES_FINDERS ['django.contrib.staticfiles.finders.FileSystemFinder', 'django.contrib.staticfiles.finders.AppDirectoriesFinder']":
+      - cell "STATICFILES_FINDERS"
+      - cell "['django.contrib.staticfiles.finders.FileSystemFinder', 'django.contrib.staticfiles.finders.AppDirectoriesFinder']"
+    - row "STATICFILES_STORAGE 'django.contrib.staticfiles.storage.StaticFilesStorage'":
+      - cell "STATICFILES_STORAGE"
+      - cell "'django.contrib.staticfiles.storage.StaticFilesStorage'"
+    - row "STATIC_ROOT '/home/duhds4uw5648/automation_exercise/static'":
+      - cell "STATIC_ROOT"
+      - cell "'/home/duhds4uw5648/automation_exercise/static'"
+    - row "STATIC_URL '/static/'":
+      - cell "STATIC_URL"
+      - cell "'/static/'"
+    - 'row "TEMPLATES [{''APP_DIRS'': True, ''BACKEND'': ''django.template.backends.django.DjangoTemplates'', ''DIRS'': [], ''OPTIONS'': {''context_processors'': [''django.template.context_processors.debug'', ''django.template.context_processors.request'', ''django.contrib.auth.context_processors.auth'', ''django.contrib.messages.context_processors.messages'']}}]"':
+      - cell "TEMPLATES"
+      - 'cell "[{''APP_DIRS'': True, ''BACKEND'': ''django.template.backends.django.DjangoTemplates'', ''DIRS'': [], ''OPTIONS'': {''context_processors'': [''django.template.context_processors.debug'', ''django.template.context_processors.request'', ''django.contrib.auth.context_processors.auth'', ''django.contrib.messages.context_processors.messages'']}}]"'
+    - row "TEST_NON_SERIALIZED_APPS []":
+      - cell "TEST_NON_SERIALIZED_APPS"
+      - cell "[]"
+    - row "TEST_RUNNER 'django.test.runner.DiscoverRunner'":
+      - cell "TEST_RUNNER"
+      - cell "'django.test.runner.DiscoverRunner'"
+    - row "THOUSAND_SEPARATOR ','":
+      - cell "THOUSAND_SEPARATOR"
+      - cell "','"
+    - row "TIME_FORMAT 'P'":
+      - cell "TIME_FORMAT"
+      - cell "'P'"
+    - row "TIME_INPUT_FORMATS ['%H:%M:%S', '%H:%M:%S.%f', '%H:%M']":
+      - cell "TIME_INPUT_FORMATS"
+      - cell "['%H:%M:%S', '%H:%M:%S.%f', '%H:%M']"
+    - row "TIME_ZONE 'Asia/Kolkata'":
+      - cell "TIME_ZONE"
+      - cell "'Asia/Kolkata'"
+    - row "USE_I18N True":
+      - cell "USE_I18N"
+      - cell "True"
+    - row "USE_L10N True":
+      - cell "USE_L10N"
+      - cell "True"
+    - row "USE_THOUSAND_SEPARATOR False":
+      - cell "USE_THOUSAND_SEPARATOR"
+      - cell "False"
+    - row "USE_TZ True":
+      - cell "USE_TZ"
+      - cell "True"
+    - row "USE_X_FORWARDED_HOST False":
+      - cell "USE_X_FORWARDED_HOST"
+      - cell "False"
+    - row "USE_X_FORWARDED_PORT False":
+      - cell "USE_X_FORWARDED_PORT"
+      - cell "False"
+    - row "WSGI_APPLICATION 'automation_exercise.wsgi.application'":
+      - cell "WSGI_APPLICATION"
+      - cell "'automation_exercise.wsgi.application'"
+    - row "X_FRAME_OPTIONS 'DENY'":
+      - cell "X_FRAME_OPTIONS"
+      - cell "'DENY'"
+    - row "YEAR_MONTH_FORMAT 'F Y'":
+      - cell "YEAR_MONTH_FORMAT"
+      - cell "'F Y'"
+- paragraph:
+  - text: You’re seeing this error because you have
+  - code: DEBUG = True
+  - text: in your Django settings file. Change that to
+  - code: "False"
+  - text: ", and Django will display a standard page generated by the handler for this status code."
+```
+
+# Test source
+
+```ts
+  1  | import { expect,test } from '@playwright/test';
+  2  | test("testcase1",async({page}) => {
+  3  |     await page.goto('http://automationexercise.com');
+  4  |     await expect(page.getByText("Home")).toBeVisible();
+  5  |     await page.getByRole('link',{name:'login'}).click();
+  6  |     await page.locator("//h2[normalize-space()='New User Signup!']").isVisible();
+  7  |     await page.getByPlaceholder("Name").fill("Praveen");
+  8  |     await page.locator("//input[@data-qa='signup-email']").fill("praveen33@gmail.com")
+  9  |     await page.getByRole("button",{name:"Signup"}).click();
+  10 |     await expect(page.getByText("Enter Account Information")).toBeVisible();
+  11 |     await page.fill("#password","praveen@123")
+  12 |     await page.getByRole('textbox', { name: 'First name *' }).fill("Praveen");
+  13 |     await page.locator("//input[@id='last_name']").fill("Kumar");
+  14 |     await page.fill("#address1","TTT Stret");
+  15 |     await page.getByLabel("Country *").selectOption({label:"India"});
+  16 |     await page.locator("#state").fill("Tamil Nadu");
+  17 |     await page.fill("#city","Madurai")
+  18 |     await page.fill("#zipcode","765845");
+  19 |     await page.fill("#mobile_number","7658456789");
+  20 |     await page.getByRole("button",{name:'Create Account'}).click();
+> 21 |     await expect(page.getByText("Account Created!")).toBeVisible();
+     |                                                      ^ Error: expect(locator).toBeVisible() failed
+  22 | 
+  23 | 
+  24 | 
+  25 | 
+  26 | })
+```
