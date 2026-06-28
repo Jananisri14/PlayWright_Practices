@@ -1,6 +1,4 @@
 import { test, expect } from '@playwright/test';
-import { url } from 'node:inspector';
-
 test('test', async ({ page }) => {
   await page.goto('https://www.google.com/');
   await page.waitForTimeout(5000);
